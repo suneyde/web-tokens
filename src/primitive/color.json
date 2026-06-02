@@ -1,0 +1,11 @@
+{
+  "color": {
+    "neutral": {
+      "0": { "$type": "color", "$value": "#ffffff" },
+      "900": { "$type": "color", "$value": "#0a0a0a" }
+    },
+    "brand": {
+      "500": { "$type": "color", "$value": "" }
+    }
+  }
+}

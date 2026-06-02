@@ -1,0 +1,12 @@
+{
+  "space": {
+    "inset": {
+      "sm": { "$type": "dimension", "$value": "{space.2}" },
+      "md": { "$type": "dimension", "$value": "{space.4}" },
+      "lg": { "$type": "dimension", "$value": "{space.6}" }
+    },
+    "stack": {
+      "md": { "$type": "dimension", "$value": "{space.4}" }
+    }
+  }
+}
