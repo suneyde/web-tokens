@@ -1,5 +1,5 @@
 {
-  "name": "@yde/web-tokens",
+  "name": "@suneyde/web-tokens",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
