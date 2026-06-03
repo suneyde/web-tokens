@@ -1,6 +1,6 @@
 {
   "name": "@suneyde/web-tokens",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Design tokens for the web: CSS custom properties, typography classes, and typed JS values generated from W3C DTCG sources with Style Dictionary.",
   "keywords": [
     "design-tokens",
