@@ -31,6 +31,7 @@
       "types": "./dist/tokens.d.ts",
       "import": "./dist/tokens.js"
     },
-    "./css": "./dist/tokens.css"
+    "./css": "./dist/tokens.css",
+    "./typography": "./dist/typography.css"
   }
 }

@@ -1,5 +1,31 @@
 import StyleDictionary from "style-dictionary";
 
+StyleDictionary.registerFormat({
+  name: "css/typography-classes",
+  format: ({ dictionary }) => {
+    const tokens = dictionary.allTokens.filter(
+      (t) => (t.$type ?? t.type) === "typography",
+    );
+    return tokens
+      .map((t) => {
+        const v = t.$value ?? t.value;
+        const family = Array.isArray(v.fontFamily)
+          ? v.fontFamily.join(", ")
+          : v.fontFamily;
+        const decls = [
+          family && `  font-family: ${family};`,
+          v.fontSize && `  font-size: ${v.fontSize};`,
+          v.fontWeight && `  font-weight: ${v.fontWeight};`,
+          v.lineHeight && `  line-height: ${v.lineHeight};`,
+          v.letterSpacing && `  letter-spacing: ${v.letterSpacing};`,
+        ]
+          .filter(Boolean)
+          .join("\n");
+        return `.text-${t.path.slice(1).join("-")} {\n${decls}\n}`;
+      })
+      .join("\n\n");
+  },
+});
 const sd = new StyleDictionary({
   source: ["src/**/*.json"],
   platforms: {
@@ -10,8 +36,10 @@ const sd = new StyleDictionary({
         {
           destination: "tokens.css",
           format: "css/variables",
+          filter: (t) => (t.$type ?? t.type) !== "typography",
           options: { outputReferences: true },
         },
+        { destination: "typography.css", format: "css/typography-classes" },
       ],
     },
     ts: {

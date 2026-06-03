@@ -4,6 +4,10 @@
       "sans": {
         "$type": "fontFamily",
         "$value": ["Inter", "system-ui", "sans-serif"]
+      },
+      "display": {
+        "$type": "fontFamily",
+        "$value": ["HeadlandOne"]
       }
     },
     "weight": {
@@ -17,7 +21,9 @@
       "md": { "$type": "dimension", "$value": "16px" },
       "lg": { "$type": "dimension", "$value": "20px" },
       "xl": { "$type": "dimension", "$value": "24px" },
-      "2xl": { "$type": "dimension", "$value": "32px" }
+      "2xl": { "$type": "dimension", "$value": "32px" },
+      "3xl": { "$type": "dimension", "$value": "48px" },
+      "4xl": { "$type": "dimension", "$value": "64px" }
     }
   }
 }
