@@ -1,19 +1,56 @@
 {
   "name": "@suneyde/web-tokens",
   "version": "0.1.3",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "node build.mjs"
+  "description": "Design tokens for the web: CSS custom properties, typography classes, and typed JS values generated from W3C DTCG sources with Style Dictionary.",
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "css-variables",
+    "custom-properties",
+    "style-dictionary",
+    "dtcg",
+    "theming",
+    "typography",
+    "spacing",
+    "css",
+    "tokens"
+  ],
+  "author": "Sune (https://github.com/suneyde)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "import": "./dist/tokens.js"
+    },
+    "./css": "./dist/tokens.css",
+    "./typography": "./dist/typography.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "files": [
     "dist"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "pnpm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suneyde/web-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suneyde/web-tokens/issues"
+  },
+  "homepage": "https://github.com/suneyde/web-tokens#readme",
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devEngines": {
     "packageManager": {
@@ -22,16 +59,7 @@
       "onFail": "download"
     }
   },
-  "type": "module",
   "devDependencies": {
     "style-dictionary": "^5.4.2"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/tokens.d.ts",
-      "import": "./dist/tokens.js"
-    },
-    "./css": "./dist/tokens.css",
-    "./typography": "./dist/typography.css"
   }
 }
