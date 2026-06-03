@@ -26,6 +26,7 @@ StyleDictionary.registerFormat({
       .join("\n\n");
   },
 });
+
 const sd = new StyleDictionary({
   source: ["src/**/*.json"],
   platforms: {
@@ -39,6 +40,12 @@ const sd = new StyleDictionary({
           filter: (t) => (t.$type ?? t.type) !== "typography",
           options: { outputReferences: true },
         },
+      ],
+    },
+    cssTypography: {
+      transforms: ["attribute/cti", "name/kebab"],
+      buildPath: "dist/",
+      files: [
         { destination: "typography.css", format: "css/typography-classes" },
       ],
     },
