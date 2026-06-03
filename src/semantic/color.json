@@ -1,6 +1,7 @@
 {
   "color": {
     "bg": { "$type": "color", "$value": "{color.neutral.0}" },
+    "bg-raised": { "$type": "color", "$value": "{color.neutral.700}" },
     "fg": { "type": "color", "$value": "{color.neutral.900}" },
     "accent": { "type": "color", "$value": "{color.brand.500}" }
   }

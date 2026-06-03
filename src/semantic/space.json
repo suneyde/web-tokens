@@ -6,7 +6,14 @@
       "lg": { "$type": "dimension", "$value": "{space.6}" }
     },
     "stack": {
-      "md": { "$type": "dimension", "$value": "{space.4}" }
+      "sm": { "$value": "{space.2}" },
+      "md": { "$value": "{space.4}" },
+      "lg": { "$value": "{space.6}" }
+    },
+    "inline": {
+      "sm": { "$value": "{space.1}" },
+      "md": { "$value": "{space.2}" },
+      "lg": { "$value": "{space.3}" }
     }
   }
 }
