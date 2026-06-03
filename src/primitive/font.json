@@ -3,11 +3,19 @@
     "family": {
       "sans": {
         "$type": "fontFamily",
-        "$value": ["Inter", "system-ui", "sans-serif"]
+        "$value": [
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif"
+        ]
       },
       "display": {
         "$type": "fontFamily",
-        "$value": ["HeadlandOne"]
+        "$value": ["Georgia", "Cambria", "Times New Roman", "Times", "serif"]
       }
     },
     "weight": {
